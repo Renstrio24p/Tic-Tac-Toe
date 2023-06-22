@@ -1,0 +1,78 @@
+// this is //
+
+.square {
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    font-weight: 500;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.square:hover {
+    background-color: aquamarine;
+    transition: .5s;
+}
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.font-size-2rem {
+    font-size: 2rem;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.boardrows {
+    display: flex;
+}
+
+.rounded-shadow {
+    border-radius: 5px;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    margin: 2px;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.pad-20 {
+    padding: 20px;
+}
+
+.pad-5 {
+    padding: 5px;
+}
+
+.m-5 {
+    margin: 5px;
+}
+
+.text-color-white {
+    color: #ffffff;
+}
+
+.button-stretch-bothside {
+    padding: 5px 10px 5px;
+}
+
+.history-stretch {
+    padding: 10px 30px 10px;
+}
+
+.highlight {
+    background-color: yellow;
+}
