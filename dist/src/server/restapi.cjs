@@ -1,14 +1,12 @@
-import express from 'express';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-import path from 'path';
-import { exec } from 'child_process';
-import rl from './inputModule.js';
+const express = require('express');
+const { fileURLToPath } = require('url');
+const path = require('path');
+const { exec } = require('child_process');
+const rl = require('./inputModule.cjs');
 
 const app = express();
 
 // Get the directory name
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Serve the index.html file
 app.get('/', (req, res) => {
@@ -20,6 +18,25 @@ app.get('/index.webpack.js', (req, res) => {
   const filePath = path.join(__dirname, '../../dist', 'index.webpack.js');
   res.set('Content-Type', 'application/javascript');
   res.sendFile(filePath);
+});
+
+// Array to store player clicks
+const playerClicks = [];
+
+// Button click handler
+app.get('/button-click', (req, res) => {
+  const buttonValue = req.query.value;
+  console.log(`Button value: ${buttonValue}`);
+
+  // Store the player's click
+  playerClicks.push(buttonValue);
+
+  res.sendStatus(200);
+});
+
+// Get player clicks
+app.get('/player-clicks', (req, res) => {
+  res.json(playerClicks);
 });
 
 // Start the server
