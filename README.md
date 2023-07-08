@@ -11,3 +11,7 @@
    - Modular Styling
    - Modular Typescript Declaration
 
+- Description
+
+   Make this project using React , Typescript and Node JS Rest API
+    
