@@ -12,6 +12,7 @@ module.exports = {
   },
   target: 'web',
   devServer: {
+    port: 5600,
     static: {
       directory: path.join(__dirname, 'src'),
       watch: true,
