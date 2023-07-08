@@ -1,4 +1,4 @@
-export default function DecisionWinner(setsquare){
+export default function DecisionWinner(setsquare: any){
 
     const line = [
         [0, 1, 2],
